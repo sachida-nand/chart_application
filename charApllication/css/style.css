@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Ubuntu:wght@300;400;500&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--mont: 'Montserrat', sans-serif;
+	--ubntu: 'Ubuntu', sans-serif;
+	--blal: 'Balsamiq Sans', cursive;
+}
+
+body {
+	background-color: #e4fbff;
+	font-family: var(--mont);
+    min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+    background-color: #ffff;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1);
+    border-radius: 3px;
+    width: 470px;
+}
+
+.form {
+	padding: 20px;
+}
+
+.form header {
+	padding-bottom: 8px;
+    margin-bottom: 20px;
+	font-size: 35px;
+	font-weight: 700;
+	border-bottom: 1px solid rgb(216, 144, 144);
+}
+
+.error-text {
+	text-align: center;
+	font-size: 1.1rem;
+	border-radius: 3px;
+	font-weight: 500;
+	padding: 5px;
+	opacity: .6;
+	background-color: red;
+	margin: 10px 0;
+    display: none;
+}
+
+.form .input-field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.form .input input {
+	height: 25px;
+	/* width: 100%; */
+	font-size: 15px;
+	color: black;
+	padding: 3px 5px;
+	outline: none;
+	border: 1px solid rgba(88, 187, 93, 0.534);
+	border-radius: 3px;
+}
+.form .input input:focus {
+	border: 1px solid rgba(86, 161, 63, 0.801);
+}
+
+.form .name-details {
+	display: flex;
+    justify-content: space-around;
+}
+
+.form .name-details .input-field:first-child {
+		margin-right: 5px;
+	}
+
+.form .name-details .input-field:last-child {
+		margin-left: 5px;
+	}
+
+.form .input-field label {
+	margin-bottom: 3px;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.form .imgage input {
+	font-size: 1rem;
+	
+}
+
+.form .btn {
+	padding: 6px;
+	background-color: #83a95c;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #e4fbff;
+	cursor: pointer;
+    margin-top: 10px;
+}
+
+.form .btn:hover {
+	background-color: #433d3c;
+}
+
+.form .already {
+	font-size: 1.1rem;
+	font-weight: 400;
+	/* margin-top: 20px; */
+}
+
+.input-field {
+	position: relative;
+}
+
+.input-field .fas {
+	position: absolute;
+	right: 10px;
+	top: 34px;
+	cursor: pointer;
+}
+
+@media (max-width: 786px) {
+	.form .name-details {
+		display: block;
+	}
+	.form .name-details .input-field:first-child {
+		margin-right: 0px;
+	}
+
+	.form .name-details .input-field:last-child {
+		margin-left: 0px;
+	}
+}
+
+
+/* users section start  */
+
+.users{
+    padding: 25px 30px;
+}
+
+.users header,
+.users-list a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.wrapper img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.users header .contant img{
+    height: 50px;
+    width: 50px;
+}
+
+.users header .contant,
+.users-list a .contant{
+    display: flex;
+    align-items: center;
+}
+
+.users header .details,
+.users-list a .details{
+    color: #000;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.users header .details span,
+.users-list a .contant span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.users header .details p,
+.users-list a .contant p{
+    font-size: 15px;
+    font-weight: 500;
+    color: green;
+}
+
+.users header .logout{
+    background-color: red;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.users header .logout:hover{
+    background-color: rgb(173, 72, 72);
+}
+
+.users .search{
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text{
+    font-size: 18px;
+}
+
+.users .search input{
+    position: absolute;
+    width: calc(100% - 78px);
+    height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    padding: 0 15px;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition:  all 0.2s ease;
+}
+
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.users .search input:focus{
+    border: 1px solid rgba(86, 161, 63, 0.801);
+}
+
+.users .search button{
+    background-color: #fff;
+    height: 32px;
+    width: 45px;
+    outline: none;
+    border: none;
+    color: #333;
+    border-radius: 0 5px 5px 0;
+    margin-left: -10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.users .search button.active{
+    background-color: rgb(42, 134, 42); 
+    color: #fff;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
+}
+
+.users-list{
+   max-height: 350px;
+   overflow-y: auto;
+}
+
+.users-list::-webkit-scrollbar,
+.chart-box::-webkit-scrollbar{
+    width: 0;
+}
+
+.users-list a .contant img{
+    height: 50px;
+    width: 50px;
+
+}
+
+.users-list a{
+    padding-right: 15px;
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    border-bottom-color: #e9e1e1;
+}
+
+.users-list a:last-child{
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.users-list a .contant p{
+    color: #67676a;
+}
+
+.users-list a .status-dot{
+    font-size: 12px;
+    color: #468669;
+}
+
+/*we'll use this class in php to show offline status */
+
+.users-list a .status-dot.offline{
+    color: #ccc;
+}
+
+
+/* chart section start  */
+
+.chart-area header{
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+}
+
+.chart-area header img{
+    height: 50px;
+    width: 50px;
+    margin: 0 15px;
+}
+
+.chart-area header .back-icon{
+    font-size: 18px;
+    color: #333;
+}
+
+.chart-area header span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.chart-area p{
+    color: rgb(11, 155, 11);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chart-box{
+    overflow-y: auto;
+    height: 450px;
+    background-color: #f7f7ff;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 3 32px 32px -32px rgb(0 0 0 / 5%), inset 0 -32px 32px -32px rgb(0 0 0 /5%);
+}
+
+
+.chart-box .outgoing{
+  display: flex;
+}
+
+.chart-box .chat{
+    margin: 15px 0;
+}
+
+.chart-box .chat p{
+    word-wrap: break-word;
+     padding: 8px 16px;
+     box-shadow: 0 0 32px rgb(0 0 0 / 8%),0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.outgoing .details p{
+    background: #333;
+    color:  #fff;
+   border-radius: 18px 18px 0 18px;
+}
+
+.chart-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+
+.chart-box .incoming img{
+    height: 40px;
+    width: 40px;
+}
+
+.incoming .details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p{
+    background: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+
+
+.chart-area .typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input{
+    height: 35px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(35, 156, 35);
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+
